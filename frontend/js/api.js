@@ -1,17 +1,20 @@
-let API_BASE_URL = "http://127.0.0.1:8000";
+let API_BASE_URL = "https://docuflow-le4j.onrender.com";
 
 async function getApiBaseUrl() {
-  const ports = ["8000", "8001"];
-  for (const port of ports) {
-    const candidate = `http://127.0.0.1:${port}`;
-    try {
-      const res = await fetch(`${candidate}/api/health`, { signal: AbortSignal.timeout(800) });
-      if (res.ok) {
-        API_BASE_URL = candidate;
-        return API_BASE_URL;
-      }
-    } catch (e) {}
+  if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+    const ports = ["8000", "8001"];
+    for (const port of ports) {
+      const candidate = `http://127.0.0.1:${port}`;
+      try {
+        const res = await fetch(`${candidate}/api/health`, { signal: AbortSignal.timeout(800) });
+        if (res.ok) {
+          API_BASE_URL = candidate;
+          return API_BASE_URL;
+        }
+      } catch (e) {}
+    }
   }
+  API_BASE_URL = "https://docuflow-le4j.onrender.com";
   return API_BASE_URL;
 }
 
