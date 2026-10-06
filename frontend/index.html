@@ -1,0 +1,657 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#565e74","secondary-fixed-dim":"#bec6e0","on-surface":"#0b1c30","on-secondary-container":"#5c647a","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","on-tertiary-container":"#f5fff6","inverse-primary":"#adc6ff","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","background":"#f8f9ff","on-tertiary":"#ffffff","surface-tint":"#005ac2","on-primary-fixed":"#001a42","inverse-on-surface":"#eaf1ff","primary-container":"#2170e4","outline-variant":"#c2c6d6","primary":"#0058be","surface-dim":"#cbdbf5","secondary-fixed":"#dae2fd","surface":"#f8f9ff","surface-bright":"#f8f9ff","error":"#ba1a1a","on-secondary-fixed-variant":"#3f465c","on-surface-variant":"#424754","error-container":"#ffdad6","on-primary-container":"#fefcff","tertiary-container":"#00855b","on-tertiary-fixed-variant":"#005236","surface-container":"#e5eeff","outline":"#727785","on-primary-fixed-variant":"#004395","on-tertiary-fixed":"#002113","surface-container-low":"#eff4ff","tertiary-fixed-dim":"#4edea3","tertiary":"#006947","on-error-container":"#93000a","on-secondary-fixed":"#131b2e","inverse-surface":"#213145","surface-container-high":"#dce9ff","primary-fixed-dim":"#adc6ff","surface-variant":"#d3e4fe","primary-fixed":"#d8e2ff","tertiary-fixed":"#6ffbbe","on-primary":"#ffffff","secondary-container":"#dae2fd"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1rem","space-xs":"0.25rem","margin":"1rem","gutter":"1rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-lg":"1.5rem","space-xl":"2rem"},fontFamily:{"headline-md":["Geist"],"mono-metric":["Geist"],"headline-lg-mobile":["Geist"],"display":["Geist"],"label-sm":["Geist"],"body-md":["Hanken Grotesk"],"title-md":["Geist"],"label-md":["Geist"],"headline-sm":["Geist"],"headline-lg":["Geist"],"body-lg":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"]},fontSize:{"headline-md":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"mono-metric":["0.8125rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"500"}],"headline-lg-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"display":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.03em","fontWeight":"600"}],"label-sm":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.5rem","letterSpacing":"-0.005em","fontWeight":"400"}],"title-md":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-md text-on-surface antialiased flex items-center justify-center min-h-screen"><main class="w-full"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col items-center">
+<!-- Subtle Background Glows -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-[700px] h-[360px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="absolute top-48 right-10 w-[300px] h-[240px] bg-tertiary-container/10 blur-[90px] rounded-full pointer-events-none -z-10"></div>
+<!-- Pre-header System Chip -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full shadow-sm mb-6">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">DocuFlow Engine v4.2 Live • Sub-second OCR Ingestion</span>
+</div>
+<!-- Headline & Supporting Text -->
+<div class="text-center max-w-4xl mx-auto">
+<h1 class="font-display text-display text-on-surface tracking-tight leading-tight">
+        Turn documents into <span class="text-primary underline decoration-primary-container/40 underline-offset-8">verified data.</span>
+</h1>
+<p class="mt-6 font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">
+        Upload invoices, forms and contracts. DocuFlow AI extracts structured information, validates it with neural models, and routes uncertain fields for human review.
+      </p>
+<!-- CTAs -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+<button class="px-6 py-3 bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md rounded-xl shadow-md transition-all flex items-center gap-2 group" id="cta-start">
+<span>Start Processing Free</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<button class="px-6 py-3 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-title-md text-title-md rounded-xl shadow-sm transition-all flex items-center gap-2" id="cta-demo">
+<span class="material-symbols-outlined text-primary text-base">play_circle</span>
+<span>View Interactive Demo</span>
+</button>
+</div>
+<!-- Quick Trust Indicators -->
+<div class="mt-4 flex items-center justify-center gap-6 text-secondary font-label-md text-label-md">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-sm">verified_user</span> Instant 14-day trial</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-sm">bolt</span> Zero schema setup</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-sm">lock</span> SOC 2 Type II</span>
+</div>
+</div>
+<!-- Visual Interactive Hero Workspace -->
+<div class="w-full mt-12 bg-surface-container-lowest rounded-2xl shadow-xl p-4 lg:p-6 overflow-hidden">
+<!-- Workspace Top Control Strip -->
+<div class="flex flex-wrap items-center justify-between pb-4 mb-4 gap-4 bg-surface-container-low px-4 py-2.5 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="flex gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-fixed"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="font-mono-metric text-mono-metric font-semibold text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm">JOB-ID: 8849-AK2</span>
+<span class="font-body-sm text-body-sm text-secondary">INV-2026-1042.pdf (1.4 MB)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-lowest rounded-lg text-secondary font-label-sm text-label-sm shadow-sm">
+<span class="h-2 w-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>Async Worker #04: Active (120ms)</span>
+</div>
+<button class="px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">download</span>
+<span>Export JSON</span>
+</button>
+</div>
+</div>
+<!-- Split Layout Viewport -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Left: Document Viewport with Bounding Box Overlays -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-4 relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3 text-secondary">
+<span class="font-mono-metric text-mono-metric uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">visibility</span> Document Viewport (Page 1/1)
+            </span>
+<div class="flex items-center gap-2 text-xs font-mono-metric">
+<span class="px-2 py-0.5 bg-surface-container rounded">Zoom: 100%</span>
+<span class="px-2 py-0.5 bg-surface-container rounded">300 DPI</span>
+</div>
+</div>
+<!-- Document Render Canvas -->
+<div class="relative bg-surface-container-lowest rounded-lg p-6 shadow-sm min-h-[460px] text-on-surface flex flex-col justify-between">
+<!-- Simulated Invoice Layout -->
+<div>
+<div class="flex justify-between items-start border-b-0 pb-4">
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">APEX LOGISTICS LLC</div>
+<div class="font-body-sm text-body-sm text-secondary">742 Industrial Pkwy, Suite 400<br>Austin, TX 78701</div>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">INVOICE</div>
+<div class="relative inline-block mt-1">
+<span class="font-mono-metric text-mono-metric bg-primary/10 text-primary px-2 py-0.5 rounded">INV-2026-1042</span>
+<!-- OCR Bounding Box Indicator -->
+<div class="absolute -inset-1 bg-primary/10 rounded pointer-events-none"></div>
+</div>
+</div>
+</div>
+<!-- Vendor Bounding Overlay Area -->
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="relative p-2 bg-surface-container-low rounded">
+<div class="text-secondary font-label-sm text-label-sm uppercase">Billed To</div>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Meridian Global Corp</div>
+<div class="font-body-sm text-body-sm text-secondary">Attn: Accounts Payable</div>
+<div class="absolute inset-0 bg-primary/10 rounded pointer-events-none"></div>
+</div>
+<div class="relative p-2 bg-surface-container-low rounded">
+<div class="text-secondary font-label-sm text-label-sm uppercase">Invoice Date</div>
+<div class="font-mono-metric text-mono-metric font-semibold text-on-surface">October 24, 2026</div>
+<div class="text-secondary font-label-sm text-label-sm uppercase mt-1">Due Date: Net 30</div>
+<div class="absolute inset-0 bg-primary/10 rounded pointer-events-none"></div>
+</div>
+</div>
+<!-- Invoice Line Items Table Simulation -->
+<div class="mt-6 relative">
+<div class="bg-surface-container-low px-3 py-1.5 rounded-t font-label-sm text-label-sm uppercase text-secondary flex justify-between">
+<span>Description</span>
+<span>Amount (USD)</span>
+</div>
+<div class="p-3 bg-surface-container-lowest space-y-2 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span>Freight Logistics Class A (Container #429)</span>
+<span class="font-mono-metric">$12,450.00</span>
+</div>
+<div class="flex justify-between">
+<span>Terminal Handling &amp; Wharfage Fees</span>
+<span class="font-mono-metric">$1,820.00</span>
+</div>
+<div class="flex justify-between text-secondary">
+<span>Carbon Offset Compliance Surcharge</span>
+<span class="font-mono-metric">$340.00</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 rounded pointer-events-none"></div>
+</div>
+</div>
+<!-- Total Amount Area with Ambiguity Alert -->
+<div class="mt-4 pt-3 flex justify-between items-center relative bg-error-container/30 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">priority_high</span> OCR Ambiguity Flagged
+                </span>
+<span class="font-body-sm text-body-sm text-secondary">Smudged optical seal near total</span>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-on-error-container font-mono-metric">$14,610.00</span>
+</div>
+<div class="absolute inset-0 bg-error/10 rounded pointer-events-none animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Right: AI Extraction Inspector & Confidence Badges -->
+<div class="lg:col-span-6 bg-surface-container-low rounded-xl p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3 text-secondary">
+<span class="font-mono-metric text-mono-metric uppercase tracking-wider text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schema</span> Live Extraction Matrix
+            </span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-mono-metric text-mono-metric font-semibold rounded">Confidence Score: 94.2% Avg</span>
+</div>
+<!-- Structured Extracted Field Cards -->
+<div class="space-y-3">
+<!-- Field 1: Vendor -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm transition hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">field: vendor_name</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-tertiary-fixed/30 text-tertiary font-mono-metric text-label-sm rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 98% [Verified]
+                </span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Apex Logistics LLC</span>
+<span class="font-mono-metric text-xs text-secondary">entity: ORG (tax_id: 82-19401)</span>
+</div>
+</div>
+<!-- Field 2: Invoice Date -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm transition hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">field: invoice_date</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-tertiary-fixed/30 text-tertiary font-mono-metric text-label-sm rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 99% [Verified]
+                </span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-on-surface">2026-10-24 (ISO-8601)</span>
+<span class="font-mono-metric text-xs text-secondary">standardized</span>
+</div>
+</div>
+<!-- Field 3: Total Amount (Flagged for Review) -->
+<div class="p-3 bg-error-container/20 rounded-lg shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-wider">field: total_amount</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-error text-on-error font-mono-metric text-label-sm rounded font-bold animate-pulse">
+<span class="material-symbols-outlined text-xs">warning</span> 61% [⚠ Human Review Required]
+                </span>
+</div>
+<div class="flex items-center justify-between mt-2">
+<div>
+<div class="font-mono-metric text-title-md font-bold text-on-surface">$14,610.00 USD</div>
+<div class="font-body-sm text-body-sm text-error">Sum of items ($14,610) matches, but stamp obscures digit 4.</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest hover:bg-surface text-on-surface font-label-sm text-label-sm rounded shadow-sm">Reject</button>
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded shadow-sm">Confirm $14,610.00</button>
+</div>
+</div>
+</div>
+<!-- Field 4: Line Items -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm transition hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">field: line_items [3]</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-tertiary-fixed/30 text-tertiary font-mono-metric text-label-sm rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 94% [Verified]
+                </span>
+</div>
+<div class="text-xs font-mono-metric text-secondary space-y-1">
+<div>[0] Freight Logistics Class A → $12,450.00</div>
+<div>[1] Terminal Handling Fees → $1,820.00</div>
+<div>[2] Carbon Offset Surcharge → $340.00</div>
+</div>
+</div>
+</div>
+<!-- Bottom Routing Status Ribbon -->
+<div class="mt-4 p-3 bg-surface-container-high rounded-lg flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">alt_route</span>
+<span class="font-label-sm text-label-sm">Routing Action: <strong class="text-on-surface">Dispatched to Tier-1 Queue</strong></span>
+</div>
+<span class="font-mono-metric text-mono-metric text-secondary">Latency: 1.84s</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Metrics Bar -->
+<section class="w-full bg-surface-container py-10 px-6 lg:px-12 my-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-mono-metric">99.4%</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-1">Extraction Accuracy</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-mono-metric">12M+</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-1">Documents Processed</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary font-mono-metric">&lt; 2.4s</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-1">Average Latency</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary font-mono-metric">100%</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mt-1">Audit Compliance</span>
+</div>
+</div>
+</section>
+<!-- 6-Step Visual Operational Flow -->
+<section class="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Deterministic Pipeline</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">How DocuFlow AI Orchestrates Unstructured Data</h2>
+<p class="mt-3 font-body-md text-body-md text-secondary">From intake to verified ERP database entry in six resilient, transparent stages.</p>
+</div>
+<!-- 6-Step Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-lowest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-primary font-bold mb-2">01 / INGEST</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">cloud_upload</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Upload</h3>
+<p class="font-body-sm text-body-sm text-secondary">PDF, TIFF, JPEG, or scanned camera captures received via API or email hook.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span> Multi-format
+        </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-lowest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-primary font-bold mb-2">02 / VISION</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">document_scanner</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Neural OCR</h3>
+<p class="font-body-sm text-body-sm text-secondary">Transforms pixel raster arrays into coordinate-bound text tokens and handwritten glyphs.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span> 60+ Languages
+        </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-lowest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-primary font-bold mb-2">03 / PARSE</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Field Extraction</h3>
+<p class="font-body-sm text-body-sm text-secondary">LLM embeddings resolve contextual key-values, line items, and nested table geometry.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span> Zero-template
+        </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-lowest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-primary font-bold mb-2">04 / AUDIT</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">rule</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Schema Validation</h3>
+<p class="font-body-sm text-body-sm text-secondary">Automated checks: subtotal addition, tax reconciliation, and purchase order pairing.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">check_circle</span> Deterministic
+        </div>
+</div>
+<!-- Step 5 (Human In Loop) -->
+<div class="bg-surface-container-high p-4 rounded-xl flex flex-col justify-between shadow-md relative group hover:bg-surface-container-highest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-error font-bold mb-2">05 / HUMAN ROUTE</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/40 flex items-center justify-center text-error mb-3">
+<span class="material-symbols-outlined">supervisor_account</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Human Review</h3>
+<p class="font-body-sm text-body-sm text-secondary">Fields under 85% confidence automatically route to verification queues for rapid 1-click clearance.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">flag</span> &lt; 85% Threshold
+        </div>
+</div>
+<!-- Step 6 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col justify-between shadow-sm relative group hover:bg-surface-container-lowest transition-all">
+<div>
+<div class="font-mono-metric text-label-sm text-tertiary font-bold mb-2">06 / SYNC</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/30 flex items-center justify-center text-tertiary mb-3">
+<span class="material-symbols-outlined">output</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-1">Verified Export</h3>
+<p class="font-body-sm text-body-sm text-secondary">Payloads dispatched in realtime via JSON Webhook, Amazon S3, or native ERP connections.</p>
+</div>
+<div class="mt-4 pt-2 text-xs font-mono-metric text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">done_all</span> REST / Webhook
+        </div>
+</div>
+</div>
+</section>
+<!-- Feature Cards Grid (6 Core Enterprise Capabilities) -->
+<section class="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="max-w-3xl mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Enterprise Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Built for high-throughput operational integrity</h2>
+<p class="mt-3 font-body-md text-body-md text-secondary">DocuFlow eliminates fragile regular expressions and rigid templates in favor of resilient cognitive pipelines.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 1. AI-powered OCR -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">translate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">AI-Powered Neural OCR</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Process complex multilingual typography, cursive handwriting, and degraded mobile scans with sub-millimeter bounding box precision across 60+ global languages.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Engine: Transformer-OCR v3</span>
+<span class="text-tertiary font-bold">99.8% F1 Score</span>
+</div>
+</div>
+<!-- 2. Intelligent Field Extraction -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">table_chart</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Intelligent Field Extraction</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Schema-free key-value pairs, nested tables, line-item itemization, and tax calculations extracted dynamically without configuring manual positional templates.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Zero-Shot Heuristics</span>
+<span class="text-primary font-bold">Autodetect Schema</span>
+</div>
+</div>
+<!-- 3. Human-in-the-Loop Verification -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Human-in-the-Loop Verification</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Configurable confidence thresholds automatically divert questionable fields to reviewer queues. Human corrections instantly retrain fine-tuned tenant adapters.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Custom Guardrails</span>
+<span class="text-tertiary font-bold">&gt;99.9% Final SLA</span>
+</div>
+</div>
+<!-- 4. Async Pipeline & Retries -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">sync_saved_locally</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Async Pipeline &amp; Retries</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Fault-tolerant distributed worker architecture with Kafka message queues, dead-letter storage, and automatic exponential backoff to handle millions of spikes effortlessly.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Concurrency Buffer</span>
+<span class="text-primary font-bold">10k Docs/Min</span>
+</div>
+</div>
+<!-- 5. Duplicate Prevention -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">fingerprint</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Duplicate Prevention</h3>
+<p class="font-body-md text-body-md text-secondary">
+            SHA-256 cryptographic hashing combined with perceptual similarity analysis prevents catastrophic double-billing, invoice tampering, and fraudulent resubmissions.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Perceptual Hash Matrix</span>
+<span class="text-tertiary font-bold">0% Double Billing</span>
+</div>
+</div>
+<!-- 6. Direct ERP Integration -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl">hub</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">CSV / JSON / Webhook Export</h3>
+<p class="font-body-md text-body-md text-secondary">
+            Zero-code native webhooks dispatch normalized schemas directly into SAP S/4HANA, NetSuite, QuickBooks, Workday, and Amazon S3 object storage lakes.
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-low p-3 rounded-lg text-xs font-mono-metric text-on-surface flex items-center justify-between">
+<span>Connectors: SAP • NetSuite</span>
+<span class="text-primary font-bold">Realtime Dispatch</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Data Visualization: Performance Latency Distribution -->
+<section class="w-full py-12 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="bg-surface-container-lowest rounded-2xl p-6 lg:p-8 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Telemetry Live Feed</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Processing Latency by Document Class</h3>
+</div>
+<div class="flex items-center gap-4 text-xs font-mono-metric text-secondary">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span> OCR &amp; Tokenize</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span> Schema Extract</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> Validation</span>
+</div>
+</div>
+<!-- Benchmark SVG Bar Visualization -->
+<div class="space-y-4 font-mono-metric text-xs">
+<div>
+<div class="flex justify-between mb-1 text-on-surface">
+<span class="font-semibold">Standard Invoices (1-2 pages)</span>
+<span>1.42s total</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[45%]" title="OCR"></div>
+<div class="bg-secondary h-full w-[35%]" title="Extract"></div>
+<div class="bg-tertiary h-full w-[20%]" title="Validate"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1 text-on-surface">
+<span class="font-semibold">Complex Master Services Agreement (MSA, 15 pages)</span>
+<span>3.88s total</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[60%]" title="OCR"></div>
+<div class="bg-secondary h-full w-[25%]" title="Extract"></div>
+<div class="bg-tertiary h-full w-[15%]" title="Validate"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1 text-on-surface">
+<span class="font-semibold">ACORD 25 Certificate of Liability</span>
+<span>1.95s total</span>
+</div>
+<div class="w-full h-4 bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full w-[40%]" title="OCR"></div>
+<div class="bg-secondary h-full w-[40%]" title="Extract"></div>
+<div class="bg-tertiary h-full w-[20%]" title="Validate"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enterprise Security & Trust Grid -->
+<section class="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Banking-Grade Architecture</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">Enterprise Security &amp; Compliance</h2>
+<p class="mt-3 font-body-md text-body-md text-secondary">Engineered to comply with stringent corporate governance, healthcare, and financial secrecy mandates.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">shield_lock</span>
+<h4 class="font-title-md text-title-md text-on-surface">SOC 2 Type II</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Independently certified controls and annual third-party audits.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">health_and_safety</span>
+<h4 class="font-title-md text-title-md text-on-surface">HIPAA Compliant</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">BAA agreements supported for protected medical documentation.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">key</span>
+<h4 class="font-title-md text-title-md text-on-surface">AES-256 Encryption</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Encrypted at rest with BYOK KMS and TLS 1.3 in transit.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">history_edu</span>
+<h4 class="font-title-md text-title-md text-on-surface">Immutable Auditing</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Cryptographically signed logs for every reviewer intervention.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl shadow-sm text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">delete_forever</span>
+<h4 class="font-title-md text-title-md text-on-surface">Zero Data Retention</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Purge-on-completion guarantees: customer data never trains shared models.</p>
+</div>
+</div>
+</section>
+<!-- Final High-Impact CTA Banner with Dropzone Preview -->
+<section class="w-full py-16 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="bg-primary text-on-primary rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Glow ambient backdrop -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+<div class="max-w-xl z-10">
+<span class="px-3 py-1 bg-on-primary/10 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-inverse-primary inline-block mb-3">Instant Sandbox Access</span>
+<h2 class="font-headline-lg text-headline-lg font-bold leading-tight">Ready to eliminate manual document entry?</h2>
+<p class="mt-4 font-body-lg text-body-lg text-inverse-primary">
+          Connect your first webhook or upload batch files in 60 seconds. Free tier includes 500 documents per month with full API access.
+        </p>
+<div class="mt-8 flex flex-wrap gap-4 items-center">
+<button class="px-6 py-3.5 bg-surface-container-lowest text-primary font-title-md text-title-md rounded-xl shadow-md hover:bg-surface-container transition-all">
+            Get Started Free
+          </button>
+<button class="px-6 py-3.5 bg-primary-container text-on-primary-container font-title-md text-title-md rounded-xl hover:bg-primary-container/80 transition-all">
+            Schedule Engineering Demo
+          </button>
+</div>
+</div>
+<!-- Sample Document Dropzone Preview Component -->
+<div class="w-full lg:w-96 bg-surface-container-lowest text-on-surface rounded-2xl p-6 shadow-2xl z-10">
+<div class="bg-surface-container-low rounded-xl p-6 text-center cursor-pointer transition-colors hover:bg-surface-container flex flex-col items-center" id="dropzone">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined text-2xl">upload_file</span>
+</div>
+<div class="font-title-md text-title-md font-semibold">Drop sample document here</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">PDF, TIFF, PNG, or JPG (max 25MB)</p>
+<button class="mt-4 px-3 py-1.5 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg shadow-sm">
+            Browse Files
+          </button>
+</div>
+<div class="mt-4 flex items-center justify-between text-xs font-mono-metric text-secondary">
+<span>Supported: PDF, ACORD, Invoice</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Engine Ready
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Clean SaaS Footer -->
+<footer class="w-full bg-surface-container-low py-12 px-6 lg:px-12 mt-12 text-secondary">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+<!-- Brand column -->
+<div class="col-span-2">
+<div class="flex items-center gap-2 text-on-surface font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-primary text-2xl">document_scanner</span>
+<span>DocuFlow AI</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-3 max-w-sm">
+          Next-generation cognitive document processing engine with deterministic schema validation and verified human-in-the-loop audit paths.
+        </p>
+<div class="mt-4 flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-lg hover:text-primary cursor-pointer">terminal</span>
+<span class="material-symbols-outlined text-lg hover:text-primary cursor-pointer">code</span>
+<span class="material-symbols-outlined text-lg hover:text-primary cursor-pointer">rss_feed</span>
+</div>
+</div>
+<!-- Column: Product -->
+<div>
+<h5 class="font-title-md text-title-md text-on-surface mb-3">Product</h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Neural OCR</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Extraction Matrix</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Human Review Queue</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">ERP Connectors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">CLI &amp; SDKs</a></li>
+</ul>
+</div>
+<!-- Column: Solutions -->
+<div>
+<h5 class="font-title-md text-title-md text-on-surface mb-3">Solutions</h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Accounts Payable</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Insurance ACORD Forms</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Logistics Bills of Lading</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Mortgage Origination</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Enterprise Security</a></li>
+</ul>
+</div>
+<!-- Column: Developers & Trust -->
+<div>
+<h5 class="font-title-md text-title-md text-on-surface mb-3">Compliance</h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="hover:text-primary transition-colors" href="#">SOC 2 Type II</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">HIPAA Safeguards</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">GDPR &amp; Zero Retention</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Documentation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">System Status (99.99%)</a></li>
+</ul>
+</div>
+</div>
+<!-- Sub-footer Bottom Bar -->
+<div class="max-w-7xl mx-auto pt-6 flex flex-col md:flex-row items-center justify-between gap-4 font-mono-metric text-xs">
+<div>© 2026 DocuFlow AI Inc. All rights reserved. Deterministic Document Intelligence.</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Security Whitepaper</a>
+<span class="text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> All Systems Operational
+        </span>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  document.getElementById('cta-demo')?.addEventListener('click', function() {
+    window.location.href = 'pages/bulk-upload.html';
+  });
+
+  document.getElementById('cta-start')?.addEventListener('click', function() {
+    window.location.href = 'dashboard.html';
+  });
+</script></main></body></html>
